@@ -29,6 +29,7 @@ const Modal: React.FC<ModalProps> = ({
 	disabled,
 }) => {
 	const [showModal, setShowModal] = useState(isOpen);
+
 	useEffect(() => {
 		setShowModal(isOpen);
 	}, [isOpen]);
@@ -63,7 +64,19 @@ const Modal: React.FC<ModalProps> = ({
 		return null;
 	}
 	return (
-		<div className="flex justify-center items-center overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none bg-neutral-800/70">
+		<div
+			className="
+			flex 
+			justify-center 
+			items-center 
+			overflow-x-hidden 
+			overflow-y-auto 
+			fixed 
+			inset-0 z-50 
+			outline-none 
+			focus:outline-none 
+			bg-neutral-800/70"
+		>
 			<div
 				className="
 					relative
@@ -74,7 +87,7 @@ const Modal: React.FC<ModalProps> = ({
 					my-6
 					mx-auto
 					h-full
-					md-auto
+					md:h-auto
 					lg:h-auto"
 			>
 				{/* CONTENT */}
@@ -89,14 +102,40 @@ const Modal: React.FC<ModalProps> = ({
 				>
 					<div
 						className="
-					    translate h-full lg:h-auto md:h-auto border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none
+					    translate
+						  h-full 
+						  lg:h-auto 
+						  md:h-auto 
+						  border-0 
+						  rounded-lg
+						  shadow-lg
+						  relative 
+						  flex
+						  flex-col
+						   w-full bg-white 
+							outline-none
+							 focus:outline-none
 					   "
 					>
 						{/* header */}
-						<div className="flex items-center justify-center p-6 rounded-t relative border-b-[1px]">
+						<div
+							className="
+							flex
+							items-center
+							justify-center
+							p-6 rounded-t
+							relative
+							border-b-[1px]"
+						>
 							<button
 								onClick={handleModalClose}
-								className="p-1 border-0 hover:opacity-70 transition absolute left-9"
+								className="
+								p-1 
+								border-0 
+								hover:opacity-70 
+								transition 
+								absolute 
+								left-9"
 							>
 								<IoMdClose size={18} />
 							</button>
@@ -105,6 +144,7 @@ const Modal: React.FC<ModalProps> = ({
 						{/*BODY */}
 						<div className="relative p-6 flex-auto">{body}</div>
 						{/* FOOTER */}
+						<div className="relative p-6 flex-auto">{footer}</div>
 						<div className="flex flex-col p-6 gap-2">
 							<div className="flex flex-row gap-4 items-center w-full">
 								{secondaryAction && secondaryActionLabel && (
