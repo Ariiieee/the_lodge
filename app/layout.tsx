@@ -12,6 +12,10 @@ export const metadata = {
 	description: "an airbnb clone app",
 };
 
+const font = Nunito({
+	subsets: ["latin"],
+});
+
 export default function RootLayout({
 	children,
 }: {
@@ -19,7 +23,7 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body className={nunito.className}>
+			<body className={font.className}>
 				<ToasterProvider />
 				<RegisterModal />
 				<Navbar />
