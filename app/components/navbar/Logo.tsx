@@ -8,13 +8,15 @@ const Logo = () => {
 	return (
 		<div className="flex flex-row justify-center items-center gap-1">
 			<Image
-				src={"/images/lodgelogo.png"}
+				src={"/images/house.png"}
 				alt="logo"
-				className="hidden md:block cursor-pointer"
-				height="30"
-				width="30"
+				className="cursor-pointer"
+				height="24"
+				width="24"
 			/>
-			<p className="font-bold text-xl text-rose-500">The Lodge</p>
+			<p className=" font-bold hidden md:block text-xl text-blue-600">
+				The Lodge
+			</p>
 		</div>
 	);
 };

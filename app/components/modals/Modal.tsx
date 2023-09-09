@@ -88,16 +88,18 @@ const Modal: React.FC<ModalProps> = ({
 					mx-auto
 					h-full
 					md:h-auto
-					lg:h-auto"
+					lg:h-auto
+					
+				"
 			>
 				{/* CONTENT */}
 				<div
 					className={`
-					translate 
-					duration-300 
-					h-full 
-					${showModal ? "translate-y-0" : "translate-y-full"}
-					${showModal ? "opacity-100" : "opacity-0"}		
+						translate 
+						duration-300 
+						h-full 
+						${showModal ? "translate-y-0" : "translate-y-full"}
+						${showModal ? "opacity-100" : "opacity-0"}		
 					`}
 				>
 					<div
@@ -130,12 +132,13 @@ const Modal: React.FC<ModalProps> = ({
 							<button
 								onClick={handleModalClose}
 								className="
-								p-1 
-								border-0 
-								hover:opacity-70 
-								transition 
-								absolute 
-								left-9"
+									p-1 
+									border-0 
+									hover:opacity-70 
+									transition 
+									absolute 
+									left-4
+								"
 							>
 								<IoMdClose size={18} />
 							</button>
@@ -144,7 +147,13 @@ const Modal: React.FC<ModalProps> = ({
 						{/*BODY */}
 						<div className="relative p-6 flex-auto">{body}</div>
 						{/* FOOTER */}
-						<div className="relative p-6 flex-auto">{footer}</div>
+						<div
+							className="
+							 relative p-6
+							 flex-auto"
+						>
+							{footer}
+						</div>
 						<div className="flex flex-col p-6 gap-2">
 							<div className="flex flex-row gap-4 items-center w-full">
 								{secondaryAction && secondaryActionLabel && (
