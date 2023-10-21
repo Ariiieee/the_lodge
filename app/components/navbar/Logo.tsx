@@ -11,10 +11,10 @@ const Logo = () => {
 				src={"/images/house.png"}
 				alt="logo"
 				className="cursor-pointer"
-				height="24"
-				width="24"
+				height="28"
+				width="28"
 			/>
-			<p className=" font-bold hidden md:block text-xl text-blue-600">
+			<p className=" font-bold hidden md:block text-lg text-blue-600">
 				The Lodge
 			</p>
 		</div>
