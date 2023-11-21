@@ -25,7 +25,7 @@ export const authOptions: AuthOptions = {
 			},
 			async authorize(credentials) {
 				if (!credentials?.email || !credentials?.password) {
-					throw new Error("Invalid Credentials");
+					throw new Error("Invalid credentials");
 				}
 				const user = await prisma.user.findUnique({
 					where: {
@@ -50,6 +50,7 @@ export const authOptions: AuthOptions = {
 			},
 		}),
 	],
+
 	pages: {
 		signIn: "/",
 	},

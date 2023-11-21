@@ -15,6 +15,7 @@ interface ModalProps {
 	secondaryActionLabel?: string;
 	secondaryAction?: () => void;
 	disabled: boolean;
+	isLoading?: boolean;
 }
 const Modal: React.FC<ModalProps> = ({
 	isOpen,
@@ -27,6 +28,7 @@ const Modal: React.FC<ModalProps> = ({
 	secondaryAction,
 	secondaryActionLabel,
 	disabled,
+	isLoading,
 }) => {
 	const [showModal, setShowModal] = useState(isOpen);
 
@@ -63,6 +65,7 @@ const Modal: React.FC<ModalProps> = ({
 	if (!isOpen) {
 		return null;
 	}
+
 	return (
 		<div
 			className="
